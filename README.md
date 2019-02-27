@@ -11,12 +11,12 @@
 
 ### < RN 0.47
 ```bash
-npm install react-native-preferencesutils@1.0.0 --save
+npm install react-native-rnpreferencesutils@1.0.0 --save
 ```
 
 ### >= RN 0.47
 ```bash
-npm install react-native-preferencesutils --save
+npm install react-native-rnpreferencesutils --save
 ```
 
 ## Project setup and initialization
@@ -26,8 +26,8 @@ npm install react-native-preferencesutils --save
 
 ```gradle
 ...
-include ':react-native-preferencesutils', ':app'
-project(':react-native-preferencesutils').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-preferencesutils/android')
+include ':react-native-rnpreferencesutils', ':app'
+project(':react-native-rnpreferencesutils').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-rnpreferencesutils/android')
 ```
 
 * In `android/app/build.gradle`
@@ -36,7 +36,7 @@ project(':react-native-preferencesutils').projectDir = new File(rootProject.proj
 ...
 dependencies {
     compile "com.facebook.react:react-native:+"
-    compile project(":react-native-preferencesutils") // <--- add this
+    compile project(":react-native-rnpreferencesutils") // <--- add this
 }
 
 ```
@@ -68,7 +68,7 @@ public class MainActivity extends ReactActivity {
 #### Import
 
 ```javascript
-import RNPrefs from "react-native-preferencesutils";
+import RNPrefs from "react-native-rnpreferencesutils";
 ```
 
 #### Save string

@@ -4,14 +4,14 @@
 
 # Overview
 
- This package provides a lot of function for save and retrieve data from shared preference
- By this package Save and retrieve string,boolean,float,long values.
+ This package provides a lot of function for save and retrieve data from shared preference.
+ By this package save and retrieve string,boolean,float,long values.
 
 ## Installation
 
 ### < RN 0.47
 ```bash
-npm install react-native-preferencesutils@0.0.1 --save
+npm install react-native-preferencesutils@1.0.0 --save
 ```
 
 ### >= RN 0.47
@@ -35,7 +35,6 @@ project(':react-native-preferencesutils').projectDir = new File(rootProject.proj
 ```gradle
 ...
 dependencies {
-    /* YOUR DEPENDENCIES HERE */
     compile "com.facebook.react:react-native:+"
     compile project(":react-native-preferencesutils") // <--- add this
 }
@@ -69,31 +68,49 @@ public class MainActivity extends ReactActivity {
 #### Import
 
 ```javascript
-import RNPreferences from "reac-native-preferencesutils";
+import RNPrefs from "react-native-preferencesutils";
 ```
 
 #### Save string
 
 ```javascript
-RNPreferences.saveString("key","value");
+RNPrefs.saveString("key","value");
 ```
 
 #### Retrieve string value
 
 ```javascript
-RNPreferences.getString("key", (value) => {
+RNPrefs.getString('key').then(value => {
   console.log(value);
 });
 ```
 
+#### Save boolean
+
+```javascript
+RNPrefs.saveBoolean("key","value");
+```
+
+#### Retrieve boolean value
+
+```javascript
+RNPrefs.getBoolean('key').then(value => {
+  console.log(value);
+});
+```
+
+.
+.
+.
+
 #### Clear all values
 
 ```javascript
-RNPreferences.clearAll();
+RNPrefs.clearAll();
 ```
 
 #### Remove Item
 
 ```javascript
-RNPreferences.remove("key");
+RNPrefs.remove("key");
 ```
